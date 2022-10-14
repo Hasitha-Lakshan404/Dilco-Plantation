@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="843.0" prefWidth="967.0" stylesheets="@../asserts/styleSheets/Stage.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierUpdateFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c153c" height="650.0" layoutX="494.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" width="428.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#111417" height="50.0" layoutX="52.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="872.0" />
+      <Label layoutX="98.0" layoutY="30.0" prefHeight="39.0" prefWidth="359.0" text="Update Supplier" textFill="#a18e8e">
+         <font>
+            <Font name="Bell MT Bold" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgClose" fitHeight="39.0" fitWidth="48.0" layoutX="870.0" layoutY="32.0" onMouseClicked="#imgCloseOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/images/Uclose.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c153c" height="650.0" layoutX="51.0" layoutY="96.0" stroke="BLACK" strokeType="INSIDE" width="428.0" />
+      <JFXTextField fx:id="txtAddSuppId" focusColor="#ffff8d" labelFloat="true" layoutX="96.0" layoutY="172.0" prefHeight="31.0" prefWidth="331.0" promptText="Supplier Id" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddSupName" focusColor="#ffff8d" labelFloat="true" layoutX="95.0" layoutY="320.0" prefHeight="31.0" prefWidth="331.0" promptText="Supplier Name" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddTelNo" focusColor="#ffff8d" labelFloat="true" layoutX="543.0" layoutY="468.0" prefHeight="31.0" prefWidth="331.0" promptText="Tell No" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton id="button" buttonType="RAISED" layoutX="579.0" layoutY="611.0" onAction="#btnUpdateOnAction" prefHeight="50.0" prefWidth="259.0" ripplerFill="#0a021e" text="Update Supplier" textFill="#cddaca">
+         <graphic>
+            <FontAwesomeIconView fill="#e1d1d1" glyphName="ARROW_UP" size="20" />
+         </graphic>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0e121c" height="31.0" layoutX="52.0" layoutY="767.0" stroke="BLACK" strokeType="INSIDE" width="872.0" />
+      <JFXComboBox fx:id="cmbAddSelectType" focusColor="#ffff8d" labelFloat="true" layoutX="539.0" layoutY="180.0" prefHeight="39.0" prefWidth="331.0" promptText="Product Type" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3" />
+      <JFXTextField fx:id="txtAddSupEmail" focusColor="#ffff8d" labelFloat="true" layoutX="95.0" layoutY="467.0" prefHeight="31.0" prefWidth="331.0" promptText="E-mail" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbAddProductName" focusColor="#ffff8d" labelFloat="true" layoutX="539.0" layoutY="325.0" prefHeight="39.0" prefWidth="331.0" promptText="Product Name" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3" />
+      <JFXTextField fx:id="txtAddSupAddress" focusColor="#ffff8d" labelFloat="true" layoutX="96.0" layoutY="626.0" prefHeight="31.0" prefWidth="331.0" promptText="Supplier Address" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblSupplierIdError" layoutX="93.0" layoutY="229.0" prefHeight="27.0" prefWidth="260.0" styleClass="wrong-input-lbl" text="   Ex : S-01 ">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblSupplierNameError" layoutX="92.0" layoutY="380.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter only Characters">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblAddressError" layoutX="96.0" layoutY="688.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Address Is Invalied">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblEmailError" layoutX="95.0" layoutY="529.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Please Insert  valid Email">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+      <Label fx:id="cmbSelectTypeError" layoutX="544.0" layoutY="228.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Select a Product Type">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+      <Label fx:id="cmbSelectNameTypeError" layoutX="538.0" layoutY="378.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Select a Product Name Type">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblTellNoError" layoutX="538.0" layoutY="529.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   You must Enter a valid Tell-No">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

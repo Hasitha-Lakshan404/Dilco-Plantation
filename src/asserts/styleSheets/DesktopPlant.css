@@ -1,0 +1,147 @@
+.root{
+    -fx-background-color:rgba(0,0,0,0);
+    -fx-background-radius:10;
+}
+* {
+    /*-fx-primary: #2A2E37;*/
+    -fx-primary: #2A2E37;
+    -fx-secondary: #FFFF8D;
+    -fx-primarytext: #B2B2B2;
+}
+* {
+    /*-fx-primary: #2A2E37;*/
+    -fx-primary: #2A2E37;
+    -fx-secondary: #FFFF8D;
+    -fx-primarytext: #B2B2B2;
+}
+
+.root {
+    /*-fx-accent: #1e74c6;*/
+    -fx-focus-color: -fx-accent;
+    /*-fx-base: #373e43;*/
+    -fx-base: #2A2E37;
+    /*-fx-base: #090930;*/
+    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-control-inner-background-alt: -fx-control-inner-background;
+}
+#button {
+    -fx-prompt-text-fill: #000000;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: -fx-secondary;
+}
+
+#button:hover {
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+
+}
+
+/*#-------------------------------------*/
+
+* {
+    /*!*-fx-primary-color: #007acc;*!*/
+    /*!*-fx-primary-color: #156942;*!*/
+    -fx-primary-color: #32ab52;
+    -fx-secondary-color: #796452;
+    -fx-light-grey-color: #d1d1d1;
+
+    -fx-focus-color: -fx-secondary-color;
+}
+
+.date-picker .selected {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+.date-picker .selected:focused {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.jfx-combo-box .list-view .list-cell{  /*for selected Drop items*/
+    -fx-text-fill: BLACK;
+
+}
+.jfx-combo-box .list-cell{ /*for selected items*/
+    -fx-text-fill: WHITE;
+}
+.wrong-input{
+    -jfx-unfocus-color: #ff0000;
+    -jfx-focus-color: #ff0000;
+}
+.wrong-input-lbl{
+    -fx-text-fill: #ff0000;
+}
+
+
+.chart {
+    -fx-padding: 10px;
+}
+
+.chart-content {
+    -fx-padding: 30px;
+}
+
+.chart-title {
+    -fx-text-fill: BLACK;
+    -fx-font-size: 1.6em;
+}
+
+.chart-legend-item {
+    -fx-text-fill: -fx-secondary;
+    /*-fx-text-fill: BLACk;*/
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-padding: 20px;
+}
+
+.axis {
+    -fx-font-size: 1.4em;
+    /*-fx-tick-label-fill: -fx-secondary;*/
+    -fx-tick-label-fill: BLACk;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 20;
+    -fx-minor-tick-length: 10;
+}
+
+.axis-label {
+    -fx-text-fill: -fx-secondary;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: #3278fa;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: #3278fa;
+}
+
+.chart-plot-background {
+    /*!*-fx-background-color: #e2ecfe;*!*/
+    /*-fx-background-color: #13ba7a;*/
+    -fx-background-color:E8E8E8;  /*iri-----*/
+    /*!*-fx-background-color: BLACK;*!*/
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: #3278fa;
+    /*!*-fx-stroke: #a3f0ec;*!*/
+    /*!*-fx-stroke: BLACK;*!*/
+}
+
+.chart-horizontal-grid-lines {
+    /*-fx-stroke: #3278fa;*/
+    /*-fx-stroke: #3C3F41;*/
+    -fx-stroke: WHITE;
+}
+
+.chart-alternative-row-fill {
+    /*!*-fx-fill: #99bcfd;*!*/
+    /*-fx-fill: #a3f0ec;*/
+    /*-fx-fill: #E8E8E8; !*iri----*!*/
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}

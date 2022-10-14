@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="961.0" prefWidth="1925.0" stylesheets="@../asserts/styleSheets/MainTheam.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlantManagementFormController">
+   <center>
+      <JFXTabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Plant">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="810.0" layoutX="50.0" layoutY="50.0" stroke="#695f83" strokeType="INSIDE" strokeWidth="6.0" width="1835.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="50.0">
+                           <effect>
+                              <BoxBlur height="15.0" width="15.0" />
+                           </effect>
+                        </Rectangle>
+                        <JFXTextField fx:id="txtPlantId" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="202.0" layoutY="145.0" prefHeight="47.0" prefWidth="253.0" promptText="Plant Id" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox id="button" fx:id="cmbPlantType" layoutX="600.0" layoutY="150.0" prefHeight="44.0" prefWidth="321.0" promptText="       Select Plant Type" />
+                        <JFXTextField fx:id="txtNewPlantType" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="1180.0" layoutY="145.0" prefHeight="47.0" prefWidth="309.0" promptText="Plant Type" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtPlantName" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="196.0" layoutY="509.0" prefHeight="47.0" prefWidth="296.0" promptText="Plant Name" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton id="button" layoutX="1555.0" layoutY="144.0" onAction="#btnAddNewPlantType" prefHeight="50.0" prefWidth="263.0" text="  Add new Plant type">
+                           <graphic>
+                              <FontAwesomeIconView id="glyph" glyphName="PLUS_CIRCLE" size="30" />
+                           </graphic>
+                        </JFXButton>
+                        <Separator layoutX="163.0" layoutY="271.0" prefHeight="5.0" prefWidth="1613.0" />
+                        <JFXTextArea fx:id="txtDescription" focusColor="#ffff8d" layoutX="600.0" layoutY="356.0" prefHeight="200.0" prefWidth="414.0" promptText="Description" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXButton id="button" layoutX="1557.0" layoutY="514.0" onAction="#btnAddPlant" prefHeight="50.0" prefWidth="263.0" text="  Add Plant">
+                           <graphic>
+                              <FontAwesomeIconView id="glyph" glyphName="PLUS" size="30" />
+                           </graphic>
+                        </JFXButton>
+                        <Label layoutX="1045.0" layoutY="167.0" text="OR" />
+                        <JFXTextField fx:id="txtUnitPrice" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="1078.0" layoutY="510.0" prefHeight="47.0" prefWidth="296.0" promptText="Unit Price" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label fx:id="lblPlantIdError" layoutX="194.0" layoutY="208.0" prefHeight="27.0" prefWidth="260.0" styleClass="wrong-input-lbl" text="   Ex : Pl-01 ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblPlantNameError" layoutX="194.0" layoutY="584.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter only Characters">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblDescriptonError" layoutX="600.0" layoutY="586.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Enter a Description">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblUnitPriceError" layoutX="1078.0" layoutY="584.0" prefHeight="27.0" prefWidth="314.0" styleClass="wrong-input-lbl" text="   you must Enter only Digits">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblAddPlantTypeError" layoutX="1180.0" layoutY="211.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter only Characters">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="cmbSelectTypeError" layoutX="600.0" layoutY="211.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Select a Plant Type">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Plant Details">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="810.0" stroke="#0d263b" strokeType="INSIDE" strokeWidth="6.0" width="1835.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                        <TableView fx:id="tblPlant" layoutX="84.0" layoutY="269.0" prefHeight="541.0" prefWidth="1763.0" style="-fx-background-color: #153246; -fx-border-color: #487965;">
+                           <columns>
+                              <TableColumn prefWidth="314.0" text="Plant Id" />
+                              <TableColumn prefWidth="470.0" text="Plant Name" />
+                              <TableColumn prefWidth="447.0" text="Plant Type" />
+                              <TableColumn prefWidth="266.0" text="Description" />
+                              <TableColumn prefWidth="264.0" text="Unit Price" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#contextEditOnAction" text="Edit" />
+                                    <MenuItem mnemonicParsing="false" onAction="#contextDeleteOnAction" text="Delete" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                        <TextField fx:id="txtSearch" layoutX="262.0" layoutY="135.0" onKeyReleased="#searchKeyReleased" prefHeight="46.0" prefWidth="907.0" promptText="    Search By Plant Id or Plant Type..." style="-fx-background-radius: 20; -fx-prompt-text-fill: WHITE; -fx-border-radius: 20; -fx-border-color: BFF5FF;" />
+                        <Pane fx:id="pneVisible" layoutX="8.0" layoutY="4.0" onMouseMoved="#paneVisibleMoveOnAction" prefHeight="912.0" prefWidth="1913.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+</BorderPane>

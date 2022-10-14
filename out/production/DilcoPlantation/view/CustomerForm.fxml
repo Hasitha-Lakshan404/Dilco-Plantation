@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bPaneCus" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="961.0" prefWidth="1925.0" stylesheets="@../asserts/styleSheets/MainTheam.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <center>
+      <JFXTabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Add Customer">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="810.0" layoutX="56.0" layoutY="51.0" stroke="#0d263b" strokeType="INSIDE" strokeWidth="6.0" width="1835.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="51.0" />
+                        <JFXTextField fx:id="txtCustomerId" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="161.0" layoutY="164.0" prefHeight="47.0" prefWidth="253.0" promptText="Customer Id" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtTelNo" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="822.0" layoutY="174.0" prefHeight="47.0" prefWidth="253.0" promptText="Tel-No" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtEmail" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="822.0" layoutY="385.0" prefHeight="47.0" prefWidth="253.0" promptText="E-mail" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtCustomerName" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="161.0" layoutY="386.0" prefHeight="47.0" prefWidth="253.0" promptText="Customer Name" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtAddress" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="161.0" layoutY="678.0" prefHeight="47.0" prefWidth="253.0" promptText="Address" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton id="button" layoutX="864.0" layoutY="666.0" onAction="#addCustomerOnAction" prefHeight="71.0" prefWidth="218.0" text="Add Customer">
+                           <graphic>
+                              <FontAwesomeIconView id="glyph" glyphName="USER_PLUS" size="36" />
+                           </graphic>
+                        </JFXButton>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="OVERLAY" fill="#0c6837" height="705.0" layoutX="1257.0" layoutY="99.0" stroke="#0d263b" strokeType="INSIDE" strokeWidth="8.0" width="582.0" />
+                        <Text fill="#35c30a" layoutX="1327.0" layoutY="293.0" lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dedicated to growing an excellent assortment of superior plants and provide our customers with the best service possible. Create for our employees a stimulating, safe, challenging and rewarding environment. Strive for business excellence by building lasting relationships with our customers." textAlignment="CENTER" wrappingWidth="451.6708984375">
+                           <font>
+                              <Font name="Algerian" size="29.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="1488.0" layoutY="150.0" text="Our Vision" underline="true">
+                           <font>
+                              <Font name="Agency FB Bold" size="38.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCusIdError" layoutX="161.0" layoutY="225.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Ex : C0-01 " visible="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblTelError" layoutX="822.0" layoutY="225.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter only  [0-9] 10 digits" visible="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblNameError" layoutX="161.0" layoutY="462.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter only Characters" visible="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblEmailError" layoutX="822.0" layoutY="462.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter vallied Email Address" visible="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblAddressError" layoutX="161.0" layoutY="751.0" prefHeight="27.0" prefWidth="520.0" styleClass="wrong-input-lbl" text="   you must Enter only [A-z] characters and  [0-9]  digits" visible="false">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Customer Details">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="810.0" layoutX="45.0" layoutY="51.0" stroke="#0d263b" strokeType="INSIDE" strokeWidth="6.0" width="1835.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                        <TableView fx:id="tblCustomer" layoutX="87.0" layoutY="282.0" prefHeight="541.0" prefWidth="1763.0" style="-fx-background-color: #153246; -fx-border-color: #487965;">
+                          <columns>
+                            <TableColumn prefWidth="236.0" text="Customer Id" />
+                            <TableColumn prefWidth="398.0" text="Customer Name" />
+                              <TableColumn prefWidth="434.0" text="E-mail" />
+                              <TableColumn prefWidth="398.0" text="Address" />
+                              <TableColumn prefWidth="296.0" text="Tell-No" />
+                          </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#contextEditOnAction" text="Edit" />
+                                    <MenuItem mnemonicParsing="false" onAction="#contextDeleteOnAction" text="Delete" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                        <TextField fx:id="txtSearch" layoutX="252.0" layoutY="125.0" onKeyReleased="#searchKeyReleased" prefHeight="46.0" prefWidth="907.0" promptText="    Search By Customer Id or Name..." style="-fx-background-radius: 20; -fx-prompt-text-fill: WHITE; -fx-border-radius: 20; -fx-border-color: BFF5FF;" />
+                        <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="198.0" layoutY="133.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/images/findUser.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton buttonType="RAISED" layoutX="1656.0" layoutY="130.0" onAction="#resetOnAction" prefHeight="41.0" prefWidth="157.0" text="Reset default">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/images/resetN.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Pane fx:id="pneVisible" layoutX="-1.0" onMouseMoved="#pneVisibleMovedAction" prefHeight="911.0" prefWidth="1925.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+</BorderPane>

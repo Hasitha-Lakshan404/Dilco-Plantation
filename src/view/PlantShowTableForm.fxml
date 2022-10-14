@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" stylesheets="@../asserts/styleSheets/DesktopPlant.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlantShowTableFormController">
+   <children>
+      <TableView fx:id="tblPlant" layoutX="19.0" layoutY="194.0" prefHeight="541.0" prefWidth="1250.0" style="-fx-background-color: #153246; -fx-border-color: #487965;" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="21.0">
+         <columns>
+            <TableColumn prefWidth="172.0" text="Plant Id" />
+            <TableColumn prefWidth="280.0" text="Plant Name" />
+            <TableColumn prefWidth="252.0" text="Plant Type" />
+            <TableColumn prefWidth="291.0" text="Description" />
+            <TableColumn prefWidth="263.0" text="Unit Price" />
+         </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#111417" height="45.0" layoutX="20.0" layoutY="68.0" stroke="BLACK" strokeType="INSIDE" width="1260.0" />
+      <ImageView fx:id="imgClose" fitHeight="39.0" fitWidth="48.0" layoutX="1237.0" layoutY="71.0" onMouseClicked="#imgCloseOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/images/Uclose.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtSearch" layoutX="229.0" layoutY="131.0" onKeyReleased="#searchKeyReleased" prefHeight="46.0" prefWidth="907.0" promptText="    Search By Plant Id or Plant Type..." style="-fx-background-radius: 20; -fx-prompt-text-fill: WHITE; -fx-border-radius: 20; -fx-border-color: BFF5FF;" />
+   </children>
+</AnchorPane>

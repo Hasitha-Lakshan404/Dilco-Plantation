@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="961.0" prefWidth="1925.0" stylesheets="@../asserts/styleSheets/MainTheam.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StokeManagementFormController">
+   <center>
+      <JFXTabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Product">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="810.0" layoutX="45.0" layoutY="64.0" stroke="#695f83" strokeType="INSIDE" strokeWidth="6.0" width="1835.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="64.0">
+                           <effect>
+                              <BoxBlur height="15.0" width="15.0" />
+                           </effect>
+                        </Rectangle>
+                        <JFXTextField fx:id="txtProductId" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="223.0" layoutY="179.0" prefHeight="47.0" prefWidth="253.0" promptText="Product Id" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox id="button" fx:id="cmbProductType" layoutX="585.0" layoutY="184.0" prefHeight="44.0" prefWidth="321.0" promptText="       Select Product Type" />
+                        <JFXTextField fx:id="txtProductName" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="225.0" layoutY="586.0" prefHeight="47.0" prefWidth="271.0" promptText="Product Name" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtNewProductType" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="1105.0" layoutY="180.0" prefHeight="47.0" prefWidth="282.0" promptText="New Product Type" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtUnitPrice" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="1107.0" layoutY="586.0" prefHeight="47.0" prefWidth="296.0" promptText="Unit Price" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton id="button" layoutX="1424.0" layoutY="181.0" onAction="#btnAddNewProductType" prefHeight="50.0" prefWidth="263.0" text="Add new Product type">
+                           <graphic>
+                              <FontAwesomeIconView id="glyph" glyphName="PLUS_CIRCLE" size="30" />
+                           </graphic>
+                        </JFXButton>
+                        <Label layoutX="1004.0" layoutY="203.0" text="OR" />
+                        <Separator layoutX="220.0" layoutY="325.0" prefHeight="0.0" prefWidth="1568.0" />
+                        <JFXTextArea fx:id="txtDescription" focusColor="#ffff8d" layoutX="593.0" layoutY="433.0" prefHeight="200.0" prefWidth="414.0" promptText="Description" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXButton id="button" layoutX="1438.0" layoutY="584.0" onAction="#btnAddProductOnAction" prefHeight="50.0" prefWidth="263.0" text="  Add Product">
+                           <graphic>
+                              <FontAwesomeIconView id="glyph" glyphName="PLUS" size="30" />
+                           </graphic>
+                        </JFXButton>
+                        <Label fx:id="lblProductIdError" layoutX="218.0" layoutY="241.0" prefHeight="27.0" prefWidth="260.0" styleClass="wrong-input-lbl" text="   Ex : PR-01 ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="cmbSelectTypeError" layoutX="593.0" layoutY="241.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Select a Product Type">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblAddProductTypeError" layoutX="1105.0" layoutY="241.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter only Characters">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblProductNameError" layoutX="218.0" layoutY="658.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter only Characters">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblDescriptonError" layoutX="596.0" layoutY="660.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Enter a Description">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblUnitPriceError" layoutX="1102.0" layoutY="658.0" prefHeight="27.0" prefWidth="314.0" styleClass="wrong-input-lbl" text="   you must Enter only Digits">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Product Details">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="810.0" layoutY="19.0" stroke="#0d263b" strokeType="INSIDE" strokeWidth="6.0" width="1835.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                        <TableView fx:id="tblProduct" layoutX="86.0" layoutY="289.0" prefHeight="541.0" prefWidth="1763.0" style="-fx-background-color: #153246; -fx-border-color: #487965;">
+                           <columns>
+                              <TableColumn prefWidth="236.0" text="Product Id" />
+                              <TableColumn prefWidth="360.0" text="Product Type" />
+                              <TableColumn prefWidth="364.0" text="Product Name" />
+                              <TableColumn prefWidth="517.0" text="Description" />
+                              <TableColumn prefWidth="285.0" text="Unit Price" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#contextEditOnAction" text="Edit" />
+                                    <MenuItem mnemonicParsing="false" onAction="#contextDeleteOnAction" text="Delete" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                        <TextField fx:id="txtSearch" layoutX="262.0" layoutY="135.0" onKeyReleased="#searchKeyReleased" prefHeight="46.0" prefWidth="907.0" promptText="    Search By Customer Id or Name..." style="-fx-background-radius: 20; -fx-prompt-text-fill: WHITE; -fx-border-radius: 20; -fx-border-color: BFF5FF;" />
+                        <Pane fx:id="pneVisible" layoutX="2.0" layoutY="1.0" onMouseMoved="#pneMouseMoveOnAction" prefHeight="907.0" prefWidth="1918.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+</BorderPane>

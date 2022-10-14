@@ -1,0 +1,14 @@
+.jfx-snackbar-content{
+    -fx-background-color:#f56f42;
+    -fx-text-fill:#ffffff;
+    -fx-font-size: 17px;
+    -fx-alignment:center;
+
+}
+
+.jfx-snackbar-toast{
+    -fx-alignment:center;
+    -fx-text-fill:#ffffff;
+    /*-fx-font-size: 50px;*/
+}
+

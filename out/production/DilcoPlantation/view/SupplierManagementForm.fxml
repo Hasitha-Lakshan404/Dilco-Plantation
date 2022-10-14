@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="961.0" prefWidth="1925.0" stylesheets="@../asserts/styleSheets/MainTheam.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierManagementFormController">
+   <center>
+      <JFXTabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab id="tabForThree" text="Supplier">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="810.0" layoutX="50.0" layoutY="50.0" stroke="#695f83" strokeType="INSIDE" strokeWidth="6.0" width="1835.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="50.0">
+                           <effect>
+                              <BoxBlur height="15.0" width="15.0" />
+                           </effect>
+                        </Rectangle>
+                        <JFXTextField fx:id="txtAddSupEmail" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="744.0" layoutY="397.0" prefHeight="47.0" prefWidth="327.0" promptText="E-mail" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtAddSupName" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="174.0" layoutY="397.0" prefHeight="47.0" prefWidth="309.0" promptText="Supplier Name" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtAddSuppId" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="174.0" layoutY="155.0" prefHeight="47.0" prefWidth="296.0" promptText="Supplier Id" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton id="button" layoutX="1303.0" layoutY="416.0" onAction="#btnAddNewSupplier" prefHeight="50.0" prefWidth="263.0" text="  Add new Suplier">
+                           <graphic>
+                              <FontAwesomeIconView id="glyph" glyphName="PLUS_CIRCLE" size="30" text="" />
+                           </graphic>
+                        </JFXButton>
+                        <Separator prefHeight="5.0" prefWidth="1613.0" />
+                        <JFXTextField fx:id="txtAddSupAddress" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="174.0" layoutY="641.0" prefHeight="47.0" prefWidth="309.0" promptText="Address" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtAddTelNo" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="741.0" layoutY="642.0" prefHeight="47.0" prefWidth="327.0" promptText="Tel No" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <Separator layoutX="174.0" layoutY="318.0" prefHeight="0.0" prefWidth="1388.0" />
+                        <Separator layoutX="174.0" layoutY="569.0" prefHeight="0.0" prefWidth="1391.0" />
+                        <JFXComboBox id="button" fx:id="cmbAddSelectType" layoutX="747.0" layoutY="165.0" prefHeight="44.0" prefWidth="321.0" promptText="        Select Product Type" />
+                        <JFXComboBox id="button" fx:id="cmbAddProductName" layoutX="1261.0" layoutY="169.0" prefHeight="44.0" prefWidth="321.0" promptText="        Select Product Name Type" />
+                        <Label fx:id="lblSupplierIdError" layoutX="174.0" layoutY="220.0" prefHeight="27.0" prefWidth="260.0" styleClass="wrong-input-lbl" text="   Ex : S-01 ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="cmbSelectTypeError" layoutX="757.0" layoutY="223.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Select a Product Type">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="cmbSelectNameTypeError" layoutX="1269.0" layoutY="227.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Select a Product Name Type">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblSupplierNameError" layoutX="174.0" layoutY="466.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter only Characters">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblEmailError" layoutX="744.0" layoutY="466.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Please Insert  valid Email">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblAddressError" layoutX="174.0" layoutY="717.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Address Is Invalied">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblTellNoError" layoutX="747.0" layoutY="717.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   You must Enter a valid Tell-No">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="tabForThree" text="Order From Supplier ">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="810.0" layoutY="87.0" stroke="#695f83" strokeType="INSIDE" strokeWidth="6.0" width="1835.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                           <effect>
+                              <BoxBlur height="15.0" width="15.0" />
+                           </effect>
+                        </Rectangle>
+                        <JFXTextField fx:id="txtOrderId" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="227.0" layoutY="143.0" prefHeight="47.0" prefWidth="253.0" promptText="Order Id" style="-fx-prompt-text-fill: #989898;" text="Auto" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtOrName" blendMode="ADD" editable="false" focusColor="#ffff8d" labelFloat="true" layoutX="1372.0" layoutY="151.0" prefHeight="47.0" prefWidth="412.0" promptText="Supplier Name" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtOrUnitPrice" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="1011.0" layoutY="363.0" prefHeight="47.0" prefWidth="282.0" promptText="Unit Price" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXDatePicker fx:id="DatePlaceOrderDate" defaultColor="#c9bee1" layoutX="566.0" layoutY="651.0" prefHeight="43.0" prefWidth="295.0" promptText="Date" />
+                        <JFXTimePicker fx:id="TimePLaceOrderTime" defaultColor="#0aa898" layoutX="1011.0" layoutY="651.0" prefHeight="43.0" prefWidth="295.0" promptText="Time" />
+                        <JFXButton id="button" layoutX="1578.0" layoutY="763.0" onAction="#btnPlaceOrderOnAction" prefHeight="64.0" prefWidth="263.0" text="Place Order">
+                           <graphic>
+                              <MaterialDesignIconView id="glyph" glyphName="CART" size="36" />
+                           </graphic>
+                        </JFXButton>
+                        <Separator prefHeight="3.0" prefWidth="1394.0" />
+                        <Separator prefHeight="1.0" prefWidth="254.0" />
+                        <JFXTextField fx:id="txtOrDetails" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="227.0" layoutY="644.0" prefHeight="47.0" prefWidth="253.0" promptText="Details" style="-fx-prompt-text-fill: #989898;" text="-None-" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtOrTotalCost" blendMode="ADD" editable="false" focusColor="#ffff8d" labelFloat="true" layoutX="573.0" layoutY="364.0" prefHeight="47.0" prefWidth="282.0" promptText="Total Cost" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtOrQuantity" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="227.0" layoutY="364.0" prefHeight="47.0" prefWidth="253.0" promptText="Quantity" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox id="button" fx:id="cmbOrSupplierId" layoutX="567.0" layoutY="144.0" prefHeight="44.0" prefWidth="249.0" promptText="      Supplier Id" />
+                        <Separator layoutX="229.0" layoutY="288.0" prefHeight="0.0" prefWidth="1388.0" />
+                        <Separator layoutX="224.0" layoutY="536.0" prefHeight="5.0" prefWidth="1073.0" />
+                        <JFXTextArea fx:id="txtOrProductDescription" editable="false" focusColor="#ffff8d" labelFloat="true" layoutX="1372.0" layoutY="340.0" prefHeight="200.0" prefWidth="414.0" promptText="Product Description" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXTextField fx:id="txtOrProductName" blendMode="ADD" editable="false" focusColor="#ffff8d" labelFloat="true" layoutX="923.0" layoutY="143.0" prefHeight="47.0" prefWidth="309.0" promptText="Product Name" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox id="button" fx:id="cmbPaymentMethod" layoutX="1380.0" layoutY="652.0" prefHeight="44.0" prefWidth="249.0" promptText="      Payment Method" />
+                        <Label fx:id="lblOrderIdError" layoutX="227.0" layoutY="209.0" prefHeight="27.0" prefWidth="260.0" styleClass="wrong-input-lbl" text="   Ex : OR-01 ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="cmbOrSelectSupplierTypeError" layoutX="573.0" layoutY="209.0" prefHeight="27.0" prefWidth="261.0" styleClass="wrong-input-lbl" text="   Select Supplier Id">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblOrDetalError" layoutX="224.0" layoutY="720.0" prefHeight="27.0" prefWidth="303.0" styleClass="wrong-input-lbl" text="   Please Input  Detail">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblOrDateError" layoutX="561.0" layoutY="720.0" prefHeight="27.0" prefWidth="303.0" styleClass="wrong-input-lbl" text="   Please Input Valid Date">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblTimeError" layoutX="1011.0" layoutY="720.0" prefHeight="27.0" prefWidth="303.0" styleClass="wrong-input-lbl" text="   Please Input Valid Time">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblOrQtyError" layoutX="229.0" layoutY="432.0" prefHeight="27.0" prefWidth="314.0" styleClass="wrong-input-lbl" text="   you must Enter only Digits">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblOrUnitpError" layoutX="1011.0" layoutY="432.0" prefHeight="27.0" prefWidth="314.0" styleClass="wrong-input-lbl" text="   you must Enter only Digits">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="cmbOrSelectPaymentMethod" layoutX="1394.0" layoutY="720.0" prefHeight="27.0" prefWidth="261.0" styleClass="wrong-input-lbl" text="   Select Payment Method">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="tabForThree" text="Supplier Details">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTabPane>
+                           <tabs>
+                              <Tab text="Supplier Order Details">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1908.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="810.0" layoutX="23.0" layoutY="27.0" stroke="#695f83" strokeType="INSIDE" strokeWidth="6.0" width="1864.0">
+                                             <effect>
+                                                <BoxBlur height="15.0" width="15.0" />
+                                             </effect>
+                                          </Rectangle>
+                                          <TableView fx:id="tblSupplierOrder" layoutX="73.0" layoutY="237.0" prefHeight="541.0" prefWidth="1763.0" style="-fx-background-color: #153246; -fx-border-color: #487965;">
+                                             <columns>
+                                                <TableColumn prefWidth="138.0" text="Order Id" />
+                                                <TableColumn prefWidth="229.0" text="Product Name" />
+                                                <TableColumn prefWidth="185.0" text="Supplier Id" />
+                                                <TableColumn prefWidth="277.0" text="Detail" />
+                                                <TableColumn prefWidth="171.0" text="Qty" />
+                                                <TableColumn prefWidth="223.0" text="Unit Price" />
+                                                <TableColumn prefWidth="209.0" text="Total Cost" />
+                                                <TableColumn prefWidth="175.0" text="Date" />
+                                                <TableColumn prefWidth="154.0" text="Time" />
+                                             </columns>
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" onAction="#contextSupOrderUpdateOnAction" text="Edit" />
+                                                      <MenuItem mnemonicParsing="false" onAction="#contextSupOrderDeleteOnAction" text="Delete" />
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu>
+                                          </TableView>
+                                          <TextField fx:id="txtSearch" layoutX="262.0" layoutY="108.0" onKeyReleased="#searchKeyReleased" prefHeight="46.0" prefWidth="907.0" promptText="    Search By Order Id /  Supplier Id/  ProductName.." style="-fx-background-radius: 20; -fx-prompt-text-fill: WHITE; -fx-border-radius: 20; -fx-border-color: BFF5FF;" />
+                                          <Pane fx:id="pneVisibleSupOrder" layoutX="10.0" layoutY="12.0" onMouseMoved="#pneMouseMovedOrderOnAction" prefHeight="814.0" prefWidth="1887.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Supplier Details">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="839.0" prefWidth="1908.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="750.0" layoutX="21.0" layoutY="46.0" stroke="#695f83" strokeType="INSIDE" strokeWidth="6.0" width="1863.0">
+                                             <effect>
+                                                <BoxBlur height="15.0" width="15.0" />
+                                             </effect>
+                                          </Rectangle>
+                                          <TableView fx:id="tblSupplier" layoutX="73.0" layoutY="160.0" prefHeight="541.0" prefWidth="1763.0" style="-fx-background-color: #153246; -fx-border-color: #487965;" AnchorPane.rightAnchor="72.0">
+                                             <columns>
+                                                <TableColumn prefWidth="175.0" text="Supplier Id" />
+                                                <TableColumn prefWidth="271.0" text="Name" />
+                                                <TableColumn prefWidth="266.0" text="E-mail" />
+                                                <TableColumn prefWidth="272.0" text="Address" />
+                                                <TableColumn prefWidth="276.0" text="Tell-No" />
+                                                <TableColumn prefWidth="257.0" text="Product Type" />
+                                                <TableColumn prefWidth="257.0" text="Product Name" />
+                                             </columns>
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" onAction="#contextSupplierEditOnAction" text="Edit" />
+                                                      <MenuItem mnemonicParsing="false" onAction="#contextSupplierDeleteOnAction" text="Delete" />
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu>
+                                          </TableView>
+                                          <Pane fx:id="pneVisible" layoutX="14.0" layoutY="14.0" onMouseMoved="#pneMouseMovedOnAction" prefHeight="814.0" prefWidth="1887.0" />
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                           </tabs>
+                        </JFXTabPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+</BorderPane>

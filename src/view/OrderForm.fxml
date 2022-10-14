@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bPane" stylesheets="@../asserts/styleSheets/MainTheam.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormController">
+   <top>
+      <JFXTabPane prefHeight="961.0" prefWidth="1925.0" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Order">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="848.0" layoutX="51.0" layoutY="12.0" stroke="#695f83" strokeType="INSIDE" strokeWidth="6.0" width="1835.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="12.0">
+                           <effect>
+                              <BoxBlur height="15.0" width="15.0" />
+                           </effect></Rectangle>
+                        <JFXTextField fx:id="txtOrderId" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="178.0" layoutY="617.0" prefHeight="47.0" prefWidth="253.0" promptText="Order Id" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox id="button" fx:id="cmbCustomerId" layoutX="189.0" layoutY="101.0" prefHeight="44.0" prefWidth="249.0" promptText="      Customer Id" />
+                        <JFXTextField fx:id="txtAdvance" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="1128.0" layoutY="615.0" prefHeight="47.0" prefWidth="301.0" promptText="Advance" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton id="button" layoutX="1639.0" layoutY="780.0" onAction="#btnPlaceOrder" prefHeight="23.0" prefWidth="202.0" text="Place Order">
+                           <graphic>
+                              <MaterialDesignIconView id="glyph" glyphName="COIN" size="36" />
+                           </graphic>
+                        </JFXButton>
+                        <Separator layoutX="178.0" layoutY="246.0" prefHeight="5.0" prefWidth="1338.0" />
+                        <Separator layoutX="154.0" layoutY="523.0" prefHeight="4.0" prefWidth="1661.0" />
+                        <JFXComboBox id="button" fx:id="cmbItemId" layoutX="189.0" layoutY="343.0" prefHeight="44.0" prefWidth="256.0" promptText="      Item Id" style="-jfx-text-fill: BLACK;" />
+                        <JFXTextField fx:id="txtItemName" blendMode="ADD" editable="false" focusColor="#ffff8d" labelFloat="true" layoutX="649.0" layoutY="342.0" prefHeight="47.0" prefWidth="365.0" promptText="Item Name" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtCustomerName" blendMode="ADD" editable="false" focusColor="#ffff8d" labelFloat="true" layoutX="649.0" layoutY="100.0" prefHeight="47.0" prefWidth="355.0" promptText="Customer Name" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtAddress" blendMode="ADD" editable="false" focusColor="#ffff8d" labelFloat="true" layoutX="1136.0" layoutY="99.0" prefHeight="47.0" prefWidth="304.0" promptText="Address" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtQty" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="1532.0" layoutY="615.0" prefHeight="47.0" prefWidth="278.0" promptText="QTY" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtItemType" blendMode="ADD" editable="false" focusColor="#ffff8d" labelFloat="true" layoutX="1134.0" layoutY="344.0" prefHeight="47.0" prefWidth="306.0" promptText="Item Type" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXDatePicker fx:id="dateHandOverDate" layoutX="636.0" layoutY="625.0" prefHeight="43.0" prefWidth="295.0" promptText="Handover Date">
+                           <defaultColor>
+                              <LinearGradient endX="0.7572815533980582" endY="1.0" startX="0.33009708737864074" startY="0.4223300970873786">
+                                 <stops>
+                                    <Stop color="#608332" />
+                                    <Stop color="#adf4f5" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </defaultColor>
+                        </JFXDatePicker>
+                        <Label layoutX="108.0" layoutY="869.0" text="Total  : ">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalShow" layoutX="201.0" layoutY="873.0" prefHeight="35.0" prefWidth="195.0" text="00.00">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtUnitPrice" blendMode="ADD" editable="false" focusColor="#ffff8d" labelFloat="true" layoutX="1541.0" layoutY="344.0" prefHeight="47.0" prefWidth="278.0" promptText="Unit Price" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label fx:id="lblCusIdError" layoutX="189.0" layoutY="158.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Please Select a Customer Id">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblQtyError" layoutX="1528.0" layoutY="683.0" prefHeight="27.0" prefWidth="314.0" styleClass="wrong-input-lbl" text="   you must Enter only Digits">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblAdvanceError" layoutX="1136.0" layoutY="682.0" prefHeight="27.0" prefWidth="314.0" styleClass="wrong-input-lbl" text="   you must Enter only Digits">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblOrIdError" layoutX="178.0" layoutY="686.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Ex: OR-01">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblItemIdError" layoutX="200.0" layoutY="409.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Please Select a Item Id">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="lblHandoverDateError" layoutX="636.0" layoutY="683.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Please Select Date">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+                           </graphic>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Pending Orders">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1895.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a2e37" height="810.0" layoutX="33.0" layoutY="78.0" stroke="#0d263b" strokeType="INSIDE" strokeWidth="6.0" width="1835.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                        <TableView fx:id="tblOrders" layoutX="81.0" layoutY="287.0" prefHeight="541.0" prefWidth="1763.0" style="-fx-background-color: #153246; -fx-border-color: #487965;">
+                           <columns>
+                              <TableColumn prefWidth="175.0" text="Order Id" />
+                              <TableColumn prefWidth="197.0" text="Customer Id" />
+                              <TableColumn prefWidth="170.0" text="Item Id" />
+                              <TableColumn prefWidth="260.0" text="Item Name" />
+                              <TableColumn prefWidth="193.0" text="Order Date" />
+                              <TableColumn prefWidth="174.0" text="Handover Date" />
+                              <TableColumn prefWidth="124.0" text="Time" />
+                              <TableColumn prefWidth="130.0" text="Qty" />
+                              <TableColumn prefWidth="159.0" text="Advance" />
+                              <TableColumn prefWidth="140.0" text="Total Cost" />
+                              <TableColumn fx:id="colPending" onEditCommit="#colPendingEditCommit" prefWidth="140.0" text="Status" />
+                              <TableColumn prefWidth="260.0" text="Customer Name" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#contextPendingEditOnAction" text="Edit" />
+                                    <MenuItem mnemonicParsing="false" onAction="#contextPendingDeleteOnAction" text="Delete" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                        <TextField fx:id="txtSearch" layoutX="262.0" layoutY="135.0" onKeyReleased="#searchKeyReleased" prefHeight="46.0" prefWidth="907.0" promptText="    Search By   Order Id /   Customer Id/   Item Id /   Name..." style="-fx-background-radius: 20; -fx-prompt-text-fill: WHITE; -fx-border-radius: 20; -fx-border-color: BFF5FF;" />
+                        <Pane fx:id="paneVisible" layoutX="12.0" layoutY="12.0" onMouseMoved="#pneMouseMoveOnAction" prefHeight="887.0" prefWidth="1918.0" />
+                        <JFXButton id="button" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="1680.0" layoutY="112.0" onAction="#calOnAction" prefHeight="77.0" prefWidth="155.0" text="Calculator" textFill="#a6a1e4">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="46.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/images/calculator1.png" />
+                                 </image></ImageView>
+                           </graphic></JFXButton>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </top>
+</BorderPane>

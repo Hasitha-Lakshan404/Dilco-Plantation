@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="961.0" prefWidth="1925.0" stylesheets="@../asserts/styleSheets/MainTheam.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeReportFormController">
+   <center>
+      <JFXTabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Monthly Income">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <LineChart fx:id="tblMonthly" layoutX="52.0" layoutY="164.0" prefHeight="704.0" prefWidth="1854.0" stylesheets="@../asserts/styleSheets/incomeChart.css" title="Monthly Income">
+                          <xAxis>
+                            <CategoryAxis label="Month" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="Revenue / Expenditure" prefHeight="536.0" prefWidth="109.0" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <JFXTextField fx:id="txtYear" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="198.0" layoutY="69.0" prefHeight="47.0" prefWidth="296.0" promptText="YEAR" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton buttonType="RAISED" layoutX="580.0" layoutY="77.0" onAction="#btnSearchOnAction" prefHeight="47.0" prefWidth="173.0" ripplerFill="#749773" text="  Search">
+                           <graphic>
+                              <FontAwesomeIconView fill="#8cb280" glyphName="SEARCH" size="26" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="1675.0" layoutY="77.0" onAction="#resetOnAction" prefHeight="41.0" prefWidth="157.0" text="Reset default">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/images/resetN.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Annually Income">
+              <content>
+                <AnchorPane id="panes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <LineChart fx:id="lineAnnualChart" layoutX="52.0" layoutY="164.0" prefHeight="704.0" prefWidth="1854.0" stylesheets="@../asserts/styleSheets/incomeChart.css" title="Annually Income">
+                           <xAxis>
+                              <CategoryAxis label="Year" side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis label="Revenue " prefHeight="536.0" prefWidth="121.0" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <JFXTextField fx:id="txtAnnualYearFrom" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="212.0" layoutY="70.0" prefHeight="47.0" prefWidth="296.0" promptText="YEAR" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton buttonType="RAISED" layoutX="1097.0" layoutY="77.0" onAction="#btnSearchAnnualOnAction" prefHeight="47.0" prefWidth="173.0" ripplerFill="#749773" text="  Search">
+                           <graphic>
+                              <FontAwesomeIconView fill="#8cb280" glyphName="SEARCH" size="26" />
+                           </graphic>
+                        </JFXButton>
+                        <Label layoutX="598.0" layoutY="83.0" text="To">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtAnnualYearTo" blendMode="ADD" focusColor="#ffff8d" labelFloat="true" layoutX="711.0" layoutY="70.0" prefHeight="47.0" prefWidth="296.0" promptText="YEAR" style="-fx-prompt-text-fill: #989898;" unFocusColor="#e4d3d3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXTextField>
+                        <Pane fx:id="paneVisible" layoutX="14.0" layoutY="17.0" onMouseClicked="#pneMouseClickOnAction" prefHeight="883.0" prefWidth="1900.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="742.0" layoutY="370.0" prefHeight="128.0" prefWidth="536.0" style="-fx-text-fill: #f0f4f5; -fx-background-color: #156482;" text="Click Here !!!">
+                                 <font>
+                                    <Font name="Calibri" size="79.0" />
+                                 </font>
+                              </Label>
+                           </children></Pane>
+                        <JFXButton buttonType="RAISED" layoutX="1675.0" layoutY="77.0" onAction="#resetOnAction" prefHeight="41.0" prefWidth="157.0" text="Reset default">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asserts/images/resetN.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+</BorderPane>

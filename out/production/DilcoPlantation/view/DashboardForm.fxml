@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1061.0" prefWidth="1925.0" stylesheets="@../asserts/styleSheets/MainTheam.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="apnMain" layoutX="-14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <JFXHamburger id="jfx-hamburger-icon" fx:id="hamburger" layoutX="15.0" layoutY="58.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="58.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="220.0" prefHeight="962.0" prefWidth="100.0" style="-fx-background-color: GRAY;" />
+   </left>
+   <top>
+      <VBox prefHeight="81.0" prefWidth="1925.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="170.0" prefWidth="1925.0">
+               <children>
+                  <MenuBar layoutX="2.0" layoutY="1.0" prefHeight="32.0" prefWidth="1925.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children></Pane>
+            <Pane prefHeight="185.0" prefWidth="1925.0" style="-fx-background-color: #2A2E37;">
+               <children>
+                  <Label fx:id="lblTitle" layoutX="255.0" prefHeight="45.0" prefWidth="463.0" text="DashBoard" textFill="#adc3b9">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView id="glyph" glyphName="HOME" layoutX="114.0" layoutY="38.0" onMouseClicked="#icnHomeOnAction" size="40" />
+                  <Label alignment="CENTER" layoutX="1194.0" layoutY="4.0" text="Date :">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.5242718446601942" endY="0.9611650485436893" startX="0.34951456310679613" startY="0.31553398058252424">
+                           <stops>
+                              <Stop color="#5e7ae1" />
+                              <Stop color="#f3f3f5" offset="0.9444444444444444" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="lblDate" layoutX="1286.0" prefHeight="45.0" prefWidth="285.0" text="12/12/0212" textFill="#a3f2cd">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="1582.0" layoutY="4.0" text="Time :">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.5242718446601942" endY="0.9611650485436893" startX="0.34951456310679613" startY="0.31553398058252424">
+                           <stops>
+                              <Stop color="#5e7ae1" />
+                              <Stop color="#f3f3f5" offset="0.9444444444444444" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="1677.0" prefHeight="45.0" prefWidth="224.0" text="13 : 12 : 51 " textFill="#a3f2cd">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

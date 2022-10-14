@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="873.0" prefWidth="745.0" stylesheets="@../asserts/styleSheets/Stage.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerUpdateFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#111417" height="50.0" layoutX="43.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <Label layoutX="89.0" layoutY="32.0" prefHeight="39.0" prefWidth="359.0" text="Update Customer" textFill="#a18e8e">
+         <font>
+            <Font name="Bell MT Bold" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgClose" fitHeight="39.0" fitWidth="48.0" layoutX="656.0" layoutY="34.0" onMouseClicked="#imgCloseOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/images/Uclose.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c153c" height="724.0" layoutX="42.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <JFXTextField fx:id="txtCustomerId" focusColor="#ffff8d" labelFloat="true" layoutX="176.0" layoutY="173.0" prefHeight="44.0" prefWidth="388.0" promptText="Customer Id" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerName" focusColor="#ffff8d" labelFloat="true" layoutX="176.0" layoutY="267.0" prefHeight="44.0" prefWidth="388.0" promptText="Customer Name" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmail" focusColor="#ffff8d" labelFloat="true" layoutX="176.0" layoutY="394.0" prefHeight="44.0" prefWidth="388.0" promptText="E-mail" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" focusColor="#ffff8d" labelFloat="true" layoutX="176.0" layoutY="509.0" prefHeight="44.0" prefWidth="388.0" promptText="Address" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTelNo" focusColor="#ffff8d" labelFloat="true" layoutX="176.0" layoutY="615.0" prefHeight="44.0" prefWidth="388.0" promptText="Tel-No" style="-fx-prompt-text-fill: #989898; -fx-text-fill: WHITE;" unFocusColor="#e4d3d3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton id="button" buttonType="RAISED" layoutX="280.0" layoutY="733.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="176.0" ripplerFill="#0a021e" text="Update Customer" textFill="#cddaca">
+         <graphic>
+            <FontAwesomeIconView fill="#e1d1d1" glyphName="ARROW_UP" size="20" />
+         </graphic>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0e121c" height="31.0" layoutX="43.0" layoutY="828.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <Label fx:id="lblCusIdError" layoutX="168.0" layoutY="223.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   Ex : C0-01 ">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblTelError" layoutX="168.0" layoutY="669.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter only  [0-9] 10 digits">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblNameError" layoutX="168.0" layoutY="319.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter only Characters">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblEmailError" layoutX="168.0" layoutY="447.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="   you must Enter vallied Email Address">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+      <Label fx:id="lblAddressError" layoutX="168.0" layoutY="560.0" prefHeight="27.0" prefWidth="520.0" styleClass="wrong-input-lbl" text="   you must Enter only [A-z] characters and  [0-9]  digits">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" />
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

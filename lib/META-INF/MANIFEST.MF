@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Main-Class: Main
+Class-Path: AnimateFX-1.2.0 .jar fontawesomefx-commons-8.15.jar fontawes
+ omefx-fontawesome-4.7.0-5.jar fontawesomefx-materialdesignfont-1.7.22-4
+ .jar fontawesomefx-materialicons-2.2.0-5.jar fontawesomefx-octicons-4.3
+ .0-5.jar fontawesomefx-weathericons-2.0.10-5.jar jfoenix-8.0.8.jar cont
+ rolsfx-8.40.11.jar bcprov-jdk15on-1.64.jar castor-core-1.4.1.jar castor
+ -xml-1.4.1.jar commons-beanutils-1.9.4.jar commons-collections-3.2.2.ja
+ r commons-collections4-4.2.jar commons-digester-2.1.jar commons-lang3-3
+ .4.jar commons-logging-1.1.1.jar ecj-3.21.0.jar itext-2.1.7.js8.jar jac
+ kson-annotations-2.12.2.jar jackson-core-2.12.2.jar jackson-databind-2.
+ 12.2.jar jasperreports-6.17.0.jar javax.inject-1.jar jcommon-1.0.23.jar
+  jfreechart-1.0.19.jar mysql-connector-java-8.0.26.jar
+

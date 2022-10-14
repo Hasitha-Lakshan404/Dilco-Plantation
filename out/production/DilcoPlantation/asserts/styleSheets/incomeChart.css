@@ -1,0 +1,29 @@
+
+
+.chart-legend-item{
+    -fx-text-fill: -fx-secondary;
+}
+.chart-title {
+    -fx-text-fill: -fx-secondary;
+    -fx-font-size: 1.6em;
+}
+
+
+.axis {
+    -fx-font-size: 1.4em;
+    -fx-tick-label-fill: -fx-secondary;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 20;
+    -fx-minor-tick-length: 10;
+}
+
+.axis-label {
+    -fx-text-fill: -fx-secondary;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #3278fa;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #3278fa;
+}
+

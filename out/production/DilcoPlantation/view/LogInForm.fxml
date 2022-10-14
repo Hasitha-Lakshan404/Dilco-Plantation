@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apnMainPane" prefHeight="450.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogInFormController">
+   <children>
+      <BorderPane fx:id="borderPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0">
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="pane1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #11D691;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="700.0" fitWidth="600.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/images/sunsetForest.jpg" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="-0.02" contrast="-0.25" />
+                           </effect>
+                        </ImageView>
+                        <Circle fx:id="circleDashFrame" fill="#fcfcfc" layoutX="335.0" layoutY="213.0" opacity="0.27" radius="170.0" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 26;">
+                           <cursor>
+                              <Cursor fx:constant="NONE" />
+                           </cursor>
+                           <stroke>
+                              <LinearGradient endX="0.8058252427184466" endY="1.0" startX="0.470873786407767" startY="0.15048543689320387">
+                                 <stops>
+                                    <Stop color="#5c9c89" />
+                                    <Stop color="#052505" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Circle>
+                        <Label layoutX="213.0" layoutY="266.0" text="Dilco Plantation">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.48058252427184467" endY="0.7669902912621359" startX="0.49514563106796117" startY="0.3543689320388349">
+                                 <stops>
+                                    <Stop color="#8aa49c" />
+                                    <Stop color="#095b3f" offset="0.996732026143791" />
+                                    <Stop color="#097936" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="125.0" layoutY="654.0" text="Contact : 07123456789" textFill="#c4e0ba">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="462.0" layoutY="654.0" text="Version : 0.0.1" textFill="#c4e0ba">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="247.0" layoutY="461.0" text="E-mail : DP@gmail.com" textFill="#c4e0ba">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="164.0" layoutY="419.0" text="Address : 211/B/34 Bandaragama road,Kandy" textFill="#c4e0ba">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="211.0" fitWidth="263.0" layoutX="210.0" layoutY="70.0" opacity="0.61" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/images/logoCrop.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="-0.27" contrast="-0.67" hue="-0.39" saturation="0.02" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3C3F41;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="700.0" fitWidth="600.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/images/monsteraLeaf.jpg" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="-0.5" contrast="-0.55" hue="-0.2" saturation="-0.22" />
+                           </effect>
+                        </ImageView>
+                        <Circle fx:id="circleDashFrame1" fill="#fcfcfc" layoutX="335.0" layoutY="213.0" opacity="0.2" radius="170.0" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 26;">
+                           <cursor>
+                              <Cursor fx:constant="NONE" />
+                           </cursor>
+                           <stroke>
+                              <LinearGradient endX="0.8058252427184466" endY="1.0" startX="1.0" startY="0.15048543689320387">
+                                 <stops>
+                                    <Stop color="#5c9c89" />
+                                    <Stop color="#ff1cb3" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Circle>
+                        <Label layoutX="213.0" layoutY="266.0" text="Dilco Plantation">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.5097087378640777" endY="1.0" startX="0.5339805825242718" startY="0.4320388349514563">
+                                 <stops>
+                                    <Stop color="#63d3b2" />
+                                    <Stop color="#425ac6" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="125.0" layoutY="654.0" text="Contact : 07123456789">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="0.941747572815534">
+                                 <stops>
+                                    <Stop color="#5ed3eb" />
+                                    <Stop color="#002a4a" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="462.0" layoutY="654.0" text="Version : 0.0.1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="0.941747572815534">
+                                 <stops>
+                                    <Stop color="#5ed3eb" />
+                                    <Stop color="#002a4a" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="247.0" layoutY="461.0" text="E-mail : DP@gmail.com">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="0.941747572815534">
+                                 <stops>
+                                    <Stop color="#5ed3eb" />
+                                    <Stop color="#002a4a" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="164.0" layoutY="419.0" text="Address : 211/B/34 Bandaragama road,Kandy">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="0.941747572815534">
+                                 <stops>
+                                    <Stop color="#5ed3eb" />
+                                    <Stop color="#002a4a" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <ImageView fitHeight="211.0" fitWidth="263.0" layoutX="210.0" layoutY="70.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/images/logoCrop.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="-0.1" contrast="-0.43" hue="0.52" saturation="-0.87" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane3" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1167b1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="700.0" fitWidth="599.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/images/seeds.jpg" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="-0.18" contrast="-0.07" hue="0.3" saturation="0.05" />
+                           </effect>
+                        </ImageView>
+                        <Circle fx:id="circleDashFrame11" fill="#fcfcfc" layoutX="335.0" layoutY="213.0" opacity="0.41" radius="170.0" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 26;">
+                           <cursor>
+                              <Cursor fx:constant="NONE" />
+                           </cursor>
+                           <stroke>
+                              <LinearGradient endX="0.8058252427184466" endY="1.0" startX="1.0" startY="0.15048543689320387">
+                                 <stops>
+                                    <Stop color="#5c9c89" />
+                                    <Stop color="#020221" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Circle>
+                        <Label layoutX="213.0" layoutY="266.0" text="Dilco Plantation">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                                 <stops>
+                                    <Stop color="#5c9c89" />
+                                    <Stop color="BLACK" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="125.0" layoutY="654.0" text="Contact : 07123456789" textFill="#81bcd0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="462.0" layoutY="654.0" text="Version : 0.0.1" textFill="#81bcd0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="247.0" layoutY="461.0" text="E-mail : DP@gmail.com" textFill="#81bcd0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="164.0" layoutY="419.0" text="Address : 211/B/34 Bandaragama road,Kandy" textFill="#81bcd0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="211.0" fitWidth="263.0" layoutX="210.0" layoutY="70.0" opacity="0.74" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/images/logoCrop.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="-0.6" contrast="-0.08" hue="0.07" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane4" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #002B52;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="700.0" fitWidth="599.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/images/greenPark.jpg" />
+                           </image>
+                        </ImageView>
+                        <Circle fx:id="circleDashFrame111" fill="#fcfcfc" layoutX="335.0" layoutY="213.0" opacity="0.2" radius="170.0" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 26;">
+                           <cursor>
+                              <Cursor fx:constant="NONE" />
+                           </cursor>
+                           <stroke>
+                              <LinearGradient endX="0.8058252427184466" endY="1.0" startX="1.0" startY="0.15048543689320387">
+                                 <stops>
+                                    <Stop color="#5c9c89" />
+                                    <Stop color="#ff1cb3" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Circle>
+                        <Label layoutX="213.0" layoutY="266.0" text="Dilco Plantation">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="0.8058252427184466" startX="0.9902912621359223" startY="0.18932038834951456">
+                                 <stops>
+                                    <Stop color="#05835d" />
+                                    <Stop color="#0a2c11" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="125.0" layoutY="654.0" text="Contact : 07123456789" textFill="#1bc660">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="462.0" layoutY="654.0" text="Version : 0.0.1" textFill="#1bc660">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="247.0" layoutY="461.0" text="E-mail : DP@gmail.com" textFill="#1bc660">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="164.0" layoutY="419.0" text="Address : 211/B/34 Bandaragama road,Kandy" textFill="#1bc660">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="211.0" fitWidth="263.0" layoutX="210.0" layoutY="70.0" opacity="0.79" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/images/logoCrop.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="-0.13" contrast="-0.39" hue="0.29" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <Pane fx:id="pneRightSide" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imgLogin" fitHeight="700.0" fitWidth="599.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../asserts/images/bgPic.jpg" />
+                     </image>
+                     <effect>
+                        <BoxBlur />
+                     </effect>
+                  </ImageView>
+                  <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="177.0" layoutY="318.0" prefHeight="31.0" prefWidth="249.0" promptText="Username" />
+                  <JFXPasswordField fx:id="pwdPassword" labelFloat="true" layoutX="176.0" layoutY="403.0" prefHeight="31.0" prefWidth="248.0" promptText="Password" />
+                  <FontAwesomeIconView glyphName="LOCK" layoutX="273.0" layoutY="119.0" size="80">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView glyphName="USER_SECRET" layoutX="130.0" layoutY="349.0" size="36" wrappingWidth="39.0">
+                     <fill>
+                        <LinearGradient endX="0.8349514563106796" startY="0.7766990291262136">
+                           <stops>
+                              <Stop color="#030302" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView glyphName="KEY" layoutX="130.0" layoutY="431.0" size="36" wrappingWidth="39.0">
+                     <fill>
+                        <LinearGradient endX="0.8349514563106796" startY="0.7766990291262136">
+                           <stops>
+                              <Stop color="#030302" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIconView>
+                  <JFXButton id="sale" fx:id="btnSignIn" buttonType="RAISED" layoutX="128.0" layoutY="564.0" onAction="#signInOnAction" prefHeight="43.0" prefWidth="147.0" style="-fx-background-radius: 20;" text="Sign in" />
+                  <JFXButton id="sale" buttonType="RAISED" layoutX="323.0" layoutY="564.0" prefHeight="43.0" prefWidth="147.0" style="-fx-background-radius: 20;" text="Cancel" />
+                  <Label layoutX="256.0" layoutY="161.0" prefHeight="31.0" prefWidth="98.0" text="Log In">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#a6d2e0" />
+                              <Stop color="#03a157" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Separator layoutX="209.0" layoutY="208.0" prefHeight="5.0" prefWidth="163.0" />
+                  <FontAwesomeIconView fx:id="icnEye" glyphName="EYE_SLASH" layoutX="426.0" layoutY="427.0" onMouseClicked="#eyeClickOnAction" size="26" />
+                  <JFXTextField fx:id="txtPassword" labelFloat="true" layoutX="176.0" layoutY="403.0" prefHeight="31.0" prefWidth="248.0" promptText="Password" unFocusColor="#152246" />
+                  <Label fx:id="lblforgot" layoutX="230.0" layoutY="462.0" onMouseClicked="#forgotPasswordOnClick" text="Forgot password ?">
+                     <font>
+                        <Font name="Bell MT Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="181.0" layoutY="664.0" text="-Are your first LogIn-">
+                     <font>
+                        <Font name="Bell MT Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSignUp" layoutX="329.0" layoutY="662.0" onMouseClicked="#signUpClickAction" text="-Sign Up-" textFill="#903b05" underline="true">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="cmbRole" layoutX="175.0" layoutY="240.0" prefHeight="31.0" prefWidth="251.0" promptText="Role" />
+                  <FontAwesomeIconView glyphName="USER" layoutX="130.0" layoutY="269.0" size="36" wrappingWidth="39.0">
+                     <fill>
+                        <LinearGradient endX="0.8349514563106796" startY="0.7766990291262136">
+                           <stops>
+                              <Stop color="#030302" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIconView>
+                  <ImageView fx:id="imgLock" fitHeight="20.0" fitWidth="35.0" layoutX="398.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/images/lockkkk.png" />
+                     </image></ImageView>
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+      <AnchorPane fx:id="apnsideBlackPane" prefHeight="700.0" prefWidth="82.0" style="-fx-background-color: #2A2E37;" />
+   </children>
+   <stylesheets>
+      <URL value="@../asserts/styleSheets/loginButton.css" />
+      <URL value="@../asserts/styleSheets/stylesnack.css" />
+   </stylesheets>
+</AnchorPane>
